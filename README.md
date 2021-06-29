@@ -5,7 +5,7 @@ The application is exactly what the title says, it's a task manager application 
 The application comes with two text files, tasks.txt and users.txt these are used to store all the users and tasks added to the application.
 There is already an admin user created and two tasks on the application by default. </br>
 </br>
-When you first run the application it asks for your username and password and will deny any invalid input if you have registered any other users they will alsobe a valid imput.
+When you first run the application it asks for your username and password and will deny any invalid input if you have registered any other users they will also be a valid input.
 Once you have logged in it will display a main menu to you and will be able to select any option but some features are limited to admin priveleges </br>
 ## Menu option 
 1. Register a user (Admin only)
@@ -27,15 +27,55 @@ User is prompted to a new window that asks for the task details eg. Who is the t
 </br>
 
 ### 3.View all tasks
-This option will simply display all the tasks in a neat easy to read format as seen below
-> Task:             ######</br>
-> Assigned to:      ######</br>
-> Date assigned:    ######</br>
-> Due date:         ######</br>
-> Task complete:    Y/N</br>
-> Task description:</br>
-> #################
+This option will simply display all the tasks in a neat easy to read format as seen below.
+</br>
+ Task: &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;######</br>
+ Assigned to:  &ensp;&ensp;&ensp;&ensp;&ensp;    ######</br>
+ Date assigned: &ensp;&ensp;&ensp;   ######</br>
+ Due date:    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;     ######</br>
+ Task complete:  &ensp;&ensp;&ensp;&ensp;&ensp;  Y/N</br>
+ Task description:</br>
+ #################
+</br>
 
+### 4.View my tasks
+This option is very similar to the option above but instead of displaying all the tasks it will only display the task assigned to the user currently signed in.
+</br>
 
+### 5.Generate reports
+This is quite a complex function which when selected will generate two new text files namely "task_overview.txt" and "user_overview.txt" and will start doing specific calculations which will be written to their respective text file. Each file will contain specific data about the tasks and users currently being tracked with the application 
 
-This is one of the biggest python projects I've made so far and I learnt alot from it running into alot of deadends but in the end I made it through.
+#### task_overview.txt
+This file will contain the following information:
+1. Number of tasks that have been generated and tracked using the task_manager.py: 
+2. Number of completed tasks:
+3. Number of incomplete tasks:
+4. Number of tasks that are incomplete and overdue:
+5. Percentage of tasks that are incomplete: 
+6. Percentage of tasks that are overdue:
+
+#### user-overview.txt
+This file will contain the following information: </br>
+* Total number of users registered with task_manager.py:
+* Total number of tasks that have generated and tracked using task_manager.py:
+  </br>
+  </br>
+For each individual user the following will be displayed about that user:
+1. Username:
+2. Number of tasks assigned to this user: 
+3. Percentage of tasks assigned to this user:
+4. Percentage of tasks completed:
+5. Percentage of tasks incomplete:
+6. Percentage of tasks incomplete and overdue:
+
+> Note: These statistics will not be displayed on screen after running this command but will rather just generate the files and store the information
+</br>
+
+### 6.Display statistics
+When this is selected then the reports will be generated just like the above function but this time it will display everything to the user.
+
+### 7. Exit
+This is pretty simple and straight foward but the program will simply to stop running but all informattion will be saved.
+</br>
+</br>
+>This is one of the biggest python projects I've made so far and I learnt alot from it running into alot of deadends but in the end I made it through.
